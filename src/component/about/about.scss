@@ -1,0 +1,107 @@
+.about {
+  position: relative;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .titleContainer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 50px;
+    text-align: center;
+    color: orange;
+    font-size: 36px;
+    z-index: 99;
+  }
+
+  .wrapper {
+    width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px;
+
+    .imgContainer {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border: 5px solid orange;
+      position: relative;
+      border-radius: 100%;
+      padding: 20px;
+
+      .aboutSvg {
+        position: absolute;
+        margin: auto;
+        object-fit: fill;
+        padding: 3.5vw;
+        margin-left: 5%;
+      }
+      img {
+        // border: 1px solid white;
+        width: 27vw;
+        height: 27vw;
+        border-radius: 75%;
+      }
+    }
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.7;
+
+        span {
+          color: orange;
+        }
+      }
+
+      h2 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 1.22;
+      }
+      p {
+        font-size: 20px;
+      }
+
+      button {
+        width: 200px;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50px;
+        border: none;
+        background: orange;
+        margin-top: 15px;
+      }
+    }
+  }
+  .iconTop {
+    margin: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 75px;
+    transition: 1s ease;
+    cursor: pointer;
+  }
+
+  .iconTop:hover {
+    scale: 1.2;
+    background-color: white;
+    color: black;
+  }
+}
