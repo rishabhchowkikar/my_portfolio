@@ -1,14 +1,9 @@
 import "./about.scss";
 import Animated from "./Animated";
+
 import { motion } from "framer-motion";
 import React, { useRef, useState } from "react";
-const data = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex vitae
- distinctio debitis accusamus? Odio sed, cum totam nemo nulla nisi, 
-porro aut, sit doloribus nostrum minima quisquam earum pariatur 
-impedit! Laborum nisi veritatis ex sint minima rerum obcaecati 
-reprehenderit exercitationem repellat numquam architecto molestiae 
-blanditiis, quod cumque enim culpa dolor repellendus earum a 
-adipisci. Voluptate aut ipsum dolorem reprehenderit accusamus.`;
+const data = `I am pursuing graduation with a Bachelor’s degree in  Computer Science from Central University of Haryana. Growing up in Rewari,Haryana , I developed a keen interest in Website related technology and its applications, which led me to pursue a career in Web Development development. I am a dedicated and motivated individual with a passion for technology and innovation. I was always intrigued by how technology could transform ideas into reality, which sparked my interest in pursuing a career in software development.`;
 
 const items = data.split(" ");
 
@@ -35,7 +30,43 @@ const TypeReactHookDemo = () => {
   }, []);
 };
 
+// download file
+
+// const downloadCV = () => {
+//   const filePath = "../../../public/rishabh_resume.pdf";
+//   const fileName = "rishabh_resume.pdf";
+//   const fileType = "application/pdf";
+
+//   fetch(filePath)
+//     .then((response) => response.blob())
+//     .then((blob) => {
+//       const a = document.createElement("a");
+//       a.download = fileName;
+//       a.href = window.URL.createObjectURL(blob);
+//       const clickEvt = new MouseEvent("click", {
+//         view: window,
+//         bubbles: true,
+//         cancelable: true,
+//       });
+//       a.dispatchEvent(clickEvt);
+//       a.remove();
+//     });
+// };
+
 const About = () => {
+  // pop up
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  const popupVariants = {
+    hidden: { opacity: 0, y: "-100vh" },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+    exit: { opacity: 0, y: "-100vh", transition: { duration: 0.3 } },
+  };
+  // Pop up
   return (
     <div className="about">
       <div className="titleContainer">
@@ -109,9 +140,67 @@ const About = () => {
               </motion.span>
             ))}
           </motion.p>
-          <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            Download CV
-          </motion.button>
+          <motion.div className="buttonContainer">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              // onClick={downloadCV}
+            >
+              Download CV
+            </motion.button>
+
+            {/* pop-up */}
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsOpen(true)}
+            >
+              Read More About Me!
+            </motion.button>
+
+            <motion.div
+              initial="hidden"
+              animate={isOpen ? "visible" : "hidden"}
+              exit="exit"
+              variants={popupVariants}
+              className="popup"
+            >
+              {/* Close button */}
+              <button className="close-button" onClick={handleClose}>
+                &times;
+              </button>
+
+              {/* Pop-up content */}
+              <div className="popup-content">
+                <h3>More About Me</h3>
+                <p>
+                  I have completed my education with distinction from Sunglow
+                  International School in Rewari. In my Higher Secondary
+                  Certificate <b>(Class XII)</b>, I achieved an impressive
+                  aggregate of <b>91.6%</b>, demonstrating a strong grasp of
+                  academic subjects and a commitment to excellence.
+                  <br />
+                  <br />
+                  Prior to this, in my Secondary School Certificate{" "}
+                  <b>(Class X)</b>, I obtained an aggregate of <b>86.6%</b>,
+                  reflecting consistent academic achievement and a solid
+                  foundation in core subjects.
+                  <br />
+                  <br /> These achievements underscore my dedication to academic
+                  success and my ability to perform effectively in a rigorous
+                  educational environment.
+                  <br />
+                  <br />I successfully completed a training program at
+                  Scholiverse Educare Private Limited focusing on Node.js, where
+                  I acquired new skills. During this program, I developed a
+                  project using JavaScript, HTML, Node.js, Express.js, and
+                  MongoDB. The project involved creating real-time communication
+                  between client and server sides using AJAX requests and
+                  managing data storage in a database.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.div>
       </div>
 

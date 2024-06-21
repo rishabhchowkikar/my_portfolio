@@ -41,7 +41,7 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
+            What we <motion.b whileHover={{ color: "orange" }}>Serves</motion.b>
           </h1>
         </div>
         <div className="title">
@@ -58,12 +58,11 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Website Development</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-            molestiae fuga. Qui excepturi assumenda nemo, molestiae quam aperiam
-            iure quae quasi temporibus expedita quis, cupiditate, optio eveniet
-            laborum impedit nisi.
+            Creating responsive and visually appealing websites using HTML, CSS,
+            and JavaScript and its framework i.e, React JS (Frontend). Ensuring
+            cross-browser compatibility and performance optimization.
           </p>
           <button>Go</button>
         </motion.div>
@@ -72,12 +71,11 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>UI/UX Design</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-            molestiae fuga. Qui excepturi assumenda nemo, molestiae quam aperiam
-            iure quae quasi temporibus expedita quis, cupiditate, optio eveniet
-            laborum impedit nisi.
+            Designing intuitive and engaging user interfaces with a focus on
+            user experience. Conducting user research and testing to improve
+            usability and accessibility.
           </p>
           <button>Go</button>
         </motion.div>
@@ -86,12 +84,11 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Prototyping & Wireframing</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-            molestiae fuga. Qui excepturi assumenda nemo, molestiae quam aperiam
-            iure quae quasi temporibus expedita quis, cupiditate, optio eveniet
-            laborum impedit nisi.
+            Developing prototypes and wireframes to visualize the layout and
+            functionality of websites and applications. Utilizing tools like
+            Figma for design accuracy.
           </p>
           <button>Go</button>
         </motion.div>
@@ -100,12 +97,11 @@ const Services = () => {
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
+          <h2>Responsive Design Implementation</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate,
-            molestiae fuga. Qui excepturi assumenda nemo, molestiae quam aperiam
-            iure quae quasi temporibus expedita quis, cupiditate, optio eveniet
-            laborum impedit nisi.
+            Ensuring websites and applications are mobile-friendly and adaptable
+            to different screen sizes. Using flexible grid layouts and media
+            queries to maintain design integrity across devices.
           </p>
           <button>Go</button>
         </motion.div>
